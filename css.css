@@ -1,0 +1,178 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: block;
+}
+
+.row1 {
+	height: 10%;
+	width: 100%;
+	display: flex;
+}
+.row2 {
+	height: 35%;
+	width: 100%;
+	display: flex;
+}
+
+.row3 {
+	height: 5%;
+	width: 100%;
+}
+
+.row4 {
+	height: 50%;
+	width: 100%;
+	display: flex;
+}
+
+.row1-box1 {
+	height: 100%;
+	width:25%;
+}
+.title1-box1 {
+	height: 100%;
+	width:50%;
+}
+.blue {background-color: #aed6e1;}
+.purple {background-color: #c8c8df;}
+.yellow {background-color: #FAE317;}
+.green {background-color: #87baba;}
+.row2-about {
+	height: 100%;
+	width:60%;
+}
+.row2-image {
+	height: 100%;
+	width:40%;
+}
+
+.column4-box1 {
+	height: 100%;
+	width: 20%;
+}
+	
+.column4-box2 {
+	height: 100%;
+	width: 30%;
+}
+.column4-box3 {
+	height: 100%;
+	width: 20%;
+	display: flex;
+}
+.column4-mini {
+	height: 100%;
+	width: 50%;
+}
+.minibox {
+	height: 25%;
+	width: 100%;
+}
+
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+/* If you're using 'display: flex' this class can be used to easily center horizontally! */
+.center-horizontal {
+	align-items: center;
+	display: flex;
+}
+
+/* If you're using 'display: flex' this class can be used to easily center vertically! */
+.center-vertical {
+	justify-content: center;
+	display: flex;
+}
+
+/* Keep your image from overflowing it's parent DIV */
+.contain-image {
+	max-height: 75%;
+	max-width: 75%;
+}
+
+/* This media query consists of the body making the class wide-col and narrow-col block when the screen is at 700px.
+ However, the classes inside of the narrow-col will be flexing meaning that the red and yellow box will be side by side.*/
+@media screen and (max-width: 700px) {
+	body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		display: block;
+	}
+	.row2 {
+		height: 40%;
+		width: 100%;
+		display: block;
+	}
+	.row2-about {
+		height: 60%;
+		width:100%;
+}
+	.row2-image {
+		height: 40%;
+		width:100%;
+		content: url("images/image_icon.jpg");
+	}
+	.row3 {
+		height: 5%;
+		width: 100%;
+		display: none;
+	}
+	.row4 {
+		display: block;
+		width: 100%;
+		height: 55%;
+	}
+	.column4-box2 {
+		order: 0;
+		width: 100%;
+	}
+	.column4-box1 {
+		order:1;
+		width: 100%;
+	}
+	.column4-box2 {
+		order: 2;
+		width: 100%;
+	}
+	.column4-box3 {
+		order: 3;
+		width: 100%;
+	}
+}
+/* The following media query transpires when the screen is at 500px, which is smaller than the first media query screen size.
+When the screen is at 500px then the narrow-col will tell its children to block, so that the red and yellow box are stacked upon
+each other. Also the sizes of the class "box" are different were the width is 100% and height is 50%. This also creates the scrolling feature
+as the height is more than 100%.*/
+
+@media screen and (max-width: 500px) {
+
+	.narrow-col {
+		height: 60%;
+		width: 100%;
+		display: block;
+	}
+
+	.box {
+		height: 50%;
+		width: 100%;
+	}
+}
+.contain-image {
+	max-height: 75%;
+	max-width: 75%;
+}
+.center-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+p {
+    font-family: 'Lobster';
+	font-size: 60px;
+	}
+p2  {
+    font-family: 'PT Serif';font-size: 22px;
+	font-size: 18.5px;
+	}
