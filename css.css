@@ -3,6 +3,8 @@ body {
 	height: 100%;
 	margin: 0;
 	display: block;
+	background-color: #c8c8df;
+	cursor: url ()
 }
 
 .row1 {
@@ -12,8 +14,9 @@ body {
 }
 .row2 {
 	height: 35%;
-	width: 100%;
+	width: 90%;
 	display: flex;
+	padding: 15px 15px 15px 15px;
 }
 
 .row3 {
@@ -22,9 +25,10 @@ body {
 }
 
 .row4 {
-	height: 50%;
-	width: 100%;
+	height: 43%;
+	width: 95%;
 	display: flex;
+	padding: 15px 15px 15px 15px;
 }
 
 .row1-box1 {
@@ -35,10 +39,12 @@ body {
 	height: 100%;
 	width:50%;
 }
-.blue {background-color: #aed6e1;}
+.blue {background-color: #89c3d3;}
 .purple {background-color: #c8c8df;}
+.purple-two{background-color: #6666a7;}
 .yellow {background-color: #FAE317;}
 .green {background-color: #87baba;}
+.white {background-color: #ffffff;}
 .row2-about {
 	height: 100%;
 	width:60%;
@@ -87,8 +93,38 @@ body {
 
 /* Keep your image from overflowing it's parent DIV */
 .contain-image {
-	max-height: 75%;
-	max-width: 75%;
+	max-height: 100%;
+	max-width: 100%;
+}
+.contain-image-two {
+	max-height: 100%;
+	max-width: 100%;
+}
+h1 {
+    font-family: 'Lobster';
+	font-size: 60px;
+}
+h2 {
+    font-family: 'Lobster';
+	font-size: 40px;
+	color: #ffffff;
+}
+h3 {
+    font-family: 'Lobster';
+	font-size: 30px;
+}
+h4 {
+    font-family: 'Lobster';
+	font-size: 20px;
+}
+p2 {
+	font-family: 'PT Serif';
+	font-size: 20px;
+	color: #a7cccc;
+}
+p3 {
+	font-family: 'PT Serif';
+	font-size: 25px;
 }
 
 /* This media query consists of the body making the class wide-col and narrow-col block when the screen is at 700px.
@@ -100,19 +136,42 @@ body {
 		margin: 0;
 		display: block;
 	}
+	h1 {
+    font-family: 'Lobster';
+	font-size: 40px;
+	}
+	h2 {
+    font-family: 'Lobster';
+	font-size: 30px;
+	}
+	h3 {
+    font-family: 'Lobster';
+	font-size: 25px;
+	}
+	p3  {
+		font-family: 'PT Serif';
+		font-size: 17px;
+	}
+	p2  {
+		font-family: 'PT Serif';
+		font-size:18px;
+	}
 	.row2 {
-		height: 40%;
+		height: 45%;
 		width: 100%;
 		display: block;
 	}
 	.row2-about {
 		height: 60%;
-		width:100%;
+		width:95%;
+		overflow: auto;
 }
 	.row2-image {
-		height: 40%;
-		width:100%;
-		content: url("images/image_icon.jpg");
+		height: 45%;
+		width:90%;
+		content: url("images/cafe.PNG");
+		align-items: center;
+		display: flex;
 	}
 	.row3 {
 		height: 5%;
@@ -124,55 +183,21 @@ body {
 		width: 100%;
 		height: 55%;
 	}
-	.column4-box2 {
-		order: 0;
-		width: 100%;
+
+	.contain-image-two {
+		display: none;
 	}
-	.column4-box1 {
-		order:1;
-		width: 100%;
+	.column4-box1{
+		display: none;
 	}
 	.column4-box2 {
+		order: 1;
+		height: 40%;
+		width: 100%;
+		overflow: auto;
+	}
+	.column4-box3 {
 		order: 2;
 		width: 100%;
 	}
-	.column4-box3 {
-		order: 3;
-		width: 100%;
-	}
 }
-/* The following media query transpires when the screen is at 500px, which is smaller than the first media query screen size.
-When the screen is at 500px then the narrow-col will tell its children to block, so that the red and yellow box are stacked upon
-each other. Also the sizes of the class "box" are different were the width is 100% and height is 50%. This also creates the scrolling feature
-as the height is more than 100%.*/
-
-@media screen and (max-width: 500px) {
-
-	.narrow-col {
-		height: 60%;
-		width: 100%;
-		display: block;
-	}
-
-	.box {
-		height: 50%;
-		width: 100%;
-	}
-}
-.contain-image {
-	max-height: 75%;
-	max-width: 75%;
-}
-.center-img {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-p {
-    font-family: 'Lobster';
-	font-size: 60px;
-	}
-p2  {
-    font-family: 'PT Serif';font-size: 22px;
-	font-size: 18.5px;
-	}
