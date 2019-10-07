@@ -39,12 +39,15 @@ body {
 	height: 100%;
 	width:50%;
 }
+/* Below are the colors and and their hex codes we used throughout the process
+of creating the responsive web page*/
 .blue {background-color: #89c3d3;}
 .purple {background-color: #c8c8df;}
 .purple-two{background-color: #6666a7;}
 .yellow {background-color: #FAE317;}
 .green {background-color: #87baba;}
 .white {background-color: #ffffff;}
+
 .row2-about {
 	height: 100%;
 	width:60%;
@@ -91,11 +94,12 @@ body {
 	display: flex;
 }
 
-/* Keep your image from overflowing it's parent DIV */
+/* Keep my image from overflowing it's parent DIV */
 .contain-image {
 	max-height: 100%;
 	max-width: 100%;
 }
+/* This is a second code that also keeps my image from overflowing it's parent DIV */
 .contain-image-two {
 	max-height: 100%;
 	max-width: 100%;
@@ -127,8 +131,11 @@ p3 {
 	font-size: 25px;
 }
 
-/* This media query consists of the body making the class wide-col and narrow-col block when the screen is at 700px.
- However, the classes inside of the narrow-col will be flexing meaning that the red and yellow box will be side by side.*/
+/* This media query consists of the body making the class row2 block its contents that its has contain being the 
+"row2-about and row2-image" be stacked upon each other. In addition, all of the divs within the "row4" are stacking
+on top of each other when the screen is at 700px. Within the code there is also the display order, and none property 
+being used. The display none property in this case is used in the "row3" in order to remove it or make it disappear
+when there is a breakpoint. Furthermore, the display order property can also you to switch the order when a breakpoint hits. */
 @media screen and (max-width: 700px) {
 	body {
 		width: 100%;
